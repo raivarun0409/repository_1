@@ -22,15 +22,11 @@ Remember:
 5. git add -A (adding all the new and modified files to the index at once)
 6. git commit -a -m "message_here" (commiting all the new and modified files at once)
 7. git log (this shows all the stored commits and with a 14 digit hex-code)
+8. git branch <branch_name> (create a new branches containing all the content of the branch from which it was created)
+9. git checkout <branch_name> (to enter another branch and the process is called checking-out)
 
 Branching are pointers to a specific commit. They are of two types: 
 1. Local branches (these ate these branches which are going to be created in our workspace and are going to be be work with the files in the local repository)
 2. Remote tracking branches (these are the branches which are going to connect the branches from the local repository to the central repository)
-
-
-8. git branch <branch_name> (create a new branches containing all the content of the branch from which it was created)
-9. git checkout <branch_name> (to enter another branch and the process is called checking-out)
-
-
 
 ########################################################################################################################
