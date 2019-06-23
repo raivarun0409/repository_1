@@ -10,7 +10,7 @@ Steps to be taken to check and upload any changes to the repository:
 4. git push origin master
 
 
-Remember:
+# Remember:
 1. git diff <filelanme> (this is to see the new changes done in the already exixting file on github)
 
 ########################################################################################################################
@@ -30,17 +30,17 @@ Remember:
 
 ## Non-linear development: (branching, merging, rebasing, pulling, commiting)
 
-# Branching
+### Branching
 Branching are pointers to a specific commit. They are of two types: 
 1. Local branches (these ate these branches which are going to be created in our workspace and are going to be be work with the files in the local repository)
 2. Remote tracking branches (these are the branches which are going to connect the branches from the local repository to the central repository)
 
-# Stashing
+### Stashing
 Git stashing is a process in which if you are not sure about the branching in which the changes are done, you can save it differently by stashing away from your main content and can access the data when you want later.
 1. git stash (stashing the current directory as a whole)
 2. git stash pop (to open the saved stash later when you are done with the editing and see the previous content where stashed)
 
-# Rebasing
+### Rebasing
 Rebasing is same as merging but, it is made to reduce the number of branches to reduce complexity of the project. The rebasing is different from merging as merging just merges the changes in a particular branch to main and does not changes the structure of the repository i.e., not hindering the branch and main file flow structure. But, the rebasing chnages the tip of the commits of the branch to the main file to make the structure simple:
 Original Structure:
 C1---------C2---------C3-----------Master
@@ -50,7 +50,7 @@ Structure after rebasing:
 C1---------C2----------C3-----------C4
                     Master        new_branch
 
-# SSH key:
+### SSH key:
 1. see the option of SSH at the url place and see the option of clone with SSH there
 2. To connect with SSH, generate a public SSH key on the device and add that key to the github account after which we can start pushing changes:
     a. ssh-keygen
@@ -58,7 +58,7 @@ C1---------C2----------C3-----------C4
     c. On github, go to settings->SSH and GPG key->Nwe SSH Key->paste the key and add
     d. On device terminal: ssh -T git@github.com
 
-# Git Flow:
+### Git Flow:
 1. Local: 1. Working directory; 2. Staging area; 3. local repo
 2. Remote repo
 
@@ -69,7 +69,7 @@ git pull: remote repo to local repo
 git checkout: local repo to working directory
 git merge: local repo to working directory
 
-# Reverting:
+### Reverting:
 1. git log (shows the hex of all the commits done till now. Find the commint to where you want ot revert to)
 2. Copy the first 8 digits of the hex code 
 3. git checkout <8_digits_copied_code_part> <file_name.ext> (reverts back to the situation when in the given commit situation only for the file called 'file_name.ext')
