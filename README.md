@@ -27,6 +27,7 @@ Steps to be taken to check and upload any changes to the repository:
 10. git merge <branch_name> (merges and modifies the content in the current branch, can be main, but keeps the branch as it is and keeps its content as it is. So, can still access that branch and modify it)
 11. git rebase <branch_name> (att the conent of the branch_name got merged in the curent branch, but with an extra thing of the head being reattached to the head in the master)
 12. git push origin <branch_name> (push all the changes, or, commits (maybe of, confirm, current branch only) on the local to the central repository in 'branch_name' branch. If it does not exist already, then a new repository will be created with the name 'branch_name'. It can also be master if the content is supposed to be copied in the master branch)
+13. git rm --cached <file_name> (to remove the indexed file)
 
 ## Non-linear development: (branching, merging, rebasing, pulling, commiting)
 
@@ -80,5 +81,10 @@ git merge: local repo to working directory
 3. git fetch (extracts all the changed and new things from central repository and adds it into another branch, local, but not changing the content of the main branch of the local repository. Make sure that we are merging that in to main after fetch))
 4. git pull = git fetch + git merge
 5. As our repository is public, they can ,make changes also, but, to avoid such thing, we can connect central and local repository via SSH to make it secure and restricted so that the others in github community can clone or download the content, but, can't make changes to the original repository.
+6. git addd *.ext (adds all the files with the extention .ext)
+7. git add . (to add everything to the index)
+8. git commit (lists all the files in the index. Now press 'i' key to go into insert mode. Then uncomment the message there(can add one of ypur own if you want). Then press 'ESC' to get out of insert mode. Now, type ':wq" and the indexed files are commited)
+9. touch .gitignore (whatever name is there in the file, those files will be ignored while indexing and commiting. Remember, .gitignore contains the name of the files which are supposed to be ignored <file_name.ext>. It can also have a directory name also whih is supposed to be ignored totally </dir_name>. It can also ignore files with particular extention <*.ext>)
+10. 
 
 ########################################################################################################################
